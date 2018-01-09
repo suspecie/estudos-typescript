@@ -1,16 +1,16 @@
 # estudos-typescript
 Pequenas dicas sobre TypeScript
 
-# Comandos TypeScript
+## Comandos TypeScript
 
-## Instalação
+### Instalação
 ```npm install -g typescript```
 
-## Verificar verão
+### Verificar versão
 ```tsc -v```
 
-## Criação automatica do tsconfig.json
+### Criação automatica do tsconfig.json
 ```tsc -init```
 
-##watcher
+### watcher
 ```tsc -w```
