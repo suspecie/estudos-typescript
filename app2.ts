@@ -6,6 +6,13 @@
 
 class Carro {
 
+    /**
+     * Atributos e métodos
+     * Privates: não é possível acessá-los diretamente
+     * Public: podem ser acessados a partir da referenciaDoObjeto.nomeAtributo ou referenciaDoObjeto.nomeMetodo
+     * 
+     */
+
     //Atributos
     private modelo: string
     private numeroDePortas: number
@@ -44,3 +51,29 @@ class Carro {
  console.log(carroA)
  carroA.acelerar()
  console.log(carroA)
+
+ /**
+  * Classe concessionaria
+  */
+
+class Concessionaria {
+    
+    private endereco: string
+    private listaDeCarros: any //permite que a variavel receba qualquer tipo de dado
+
+    constructor(endereco: string) {
+        this.endereco = endereco
+    }
+
+    public fornecerEndereco(): string {
+        return this.endereco
+    }
+
+    public mostrarListaDeCarros(): any {
+        return this.listaDeCarros
+    }
+
+}
+
+let concessionaria = new Concessionaria('Av. Paulista');
+console.log(concessionaria)
