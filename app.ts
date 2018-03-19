@@ -23,3 +23,4 @@ let estudandoAngular: boolean = true
 let listaDeFrutas: Array<string> = ['Uva', 'Banana', 'Manga']
 let listaDeFrutas2: string[] =['Pera', 'Morango', 'Melancia'] //outro exemplo de declaracao de arrays
 let notas: Array<number> = [7.8,9,10]
+let notas2: number[] = [7.8,9,10] //esse outro tipo de declaração é mais utilizado.

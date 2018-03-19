@@ -9,6 +9,8 @@ Pequenas dicas sobre TypeScript
 
 - Scripts typescript precisam ter a extensão .ts
 
+- O TypeScript permite a implementação de interfaces e generics.
+
 ## Comandos TypeScript
 
 ### Instalação
@@ -27,7 +29,35 @@ Para executar o arquivo .js
 ```node nomedoarquivo.js```
 
 ### Criação automatica do tsconfig.json
+
+É possível configurar os parâmetros de compilação, a partir do arquivo tsconfig.json podemos enviar instruções para o compilador.
+
+Para criar o arquivo tsconfig.json utilizamos o comando:
+
 ```tsc -init```
+
+Quando rodamos o comando tsc e é criado um arquivo .js. O compilador sabe fazer esse transpile pois o parâmetro target informa para qual linguagem ele tem que compilar que no caso o configurado é ES5.
+
+#### Parâmetros tsconfig.json
+
+-  Target: Informar para qual versão do ES vai ser compilado, ou seja qual ES os navegadores irão entender.
+-  outDir: Em qual diretório serão gerados os arquivos compilados.
 
 ### watcher
 ```tsc -w```
+
+### Inferência de Tipo
+
+O JavaScript permite vc declarar uma variável de um tipo e no meio do código alterar essa variável para outro tipo. (Lembrando que essas alterações podem dar problemas/bugs).
+
+``` //Exemplo ```
+``` let  variavel1 = 'Minhas Dicas'; ```
+``` variavel1 = true; ```
+
+O TypeScript ajuda a resolver esses problemas fazendo a Inferência de Tipo para variáveis.
+E também nos ajuda a identificar caso tentamos colocar outro tipo em uma variável ja declarada.
+
+``` //Exemplo ```
+``` let  titulo: string = "A menina que roubava livros"; ```
+
+
