@@ -46,7 +46,7 @@ Quando rodamos o comando tsc e é criado um arquivo .js. O compilador sabe fazer
 ### watcher
 ```tsc -w```
 
-### Inferência de Tipo
+## Inferência de Tipo
 
 O JavaScript permite vc declarar uma variável de um tipo e no meio do código alterar essa variável para outro tipo. (Lembrando que essas alterações podem dar problemas/bugs).
 
@@ -60,12 +60,12 @@ E também nos ajuda a identificar caso tentamos colocar outro tipo em uma variá
 ``` //Exemplo ```
 ``` let  titulo: string = "A menina que roubava livros"; ```
 
-### Modificadores de Visibilidade - Métodos e Atributos
+## Modificadores de Visibilidade - Métodos e Atributos
 
 - Private : não consigo acessá-lo diretamente.
 - Public: podem ser acessados a partir da referencia do objeto . nome do atributo ou metodo.
 
-### .map()
+## .map()
 
 Função nativa de variáveis do tipo array.
 Um loop dentro de cada uma das posições do array, podemos recuperar o valor e fazer uma determinada ação através do envio de uma funcao de callback.
@@ -73,6 +73,26 @@ Um loop dentro de cada uma das posições do array, podemos recuperar o valor e 
 ``` lojaConcessionaria.mostrarListaDeCarros().map((carro: Carro) => { console.log(carro); }) ```
 
 Mais funções: https://www.w3schools.com/js/js_array_methods.asp
+
+## Export e Import
+
+ - export: Para transformar a classe em módulo. Posso ter variáveis, classes e funções sendo exportadas.
+ ``` export class Carro{} ```
+
+ - import: para importar os módulos
+ ```import { NomeDaClasse } from './CaminhoDoArquivo'; ```
+
+ ### Export
+- default: é permitido somente uma exportação default por arquivo.
+``` export default class Carro {} ```
+
+ ### Import
+- alias: podemos colocar um alias no import.
+``` import { NomeDaClasse as nomedoalias} from './CaminhoDoArquivo'; ```
+- default: importação default é um pouco diferente a estrutura.
+``` import NomeDaClasse from './CaminhoDoArquivo'; ```
+
+
 
 
 

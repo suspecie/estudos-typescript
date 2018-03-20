@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Carro_1 = require("./Carro");
+var Pessoa_1 = require("./Pessoa");
+var Concessionaria_1 = require("./Concessionaria");
+var carroA = new Carro_1.default('veloster', 4);
+var carroB = new Carro_1.default('uno', 2);
+var cliente = new Pessoa_1.default('Joao', 'veloster');
+var listaDeCarros = [carroA, carroB];
+var concessionaria = new Concessionaria_1.default('Av. Paulista', listaDeCarros);
