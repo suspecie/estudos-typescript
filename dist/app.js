@@ -21,3 +21,4 @@ var estudandoAngular = true;
 var listaDeFrutas = ['Uva', 'Banana', 'Manga'];
 var listaDeFrutas2 = ['Pera', 'Morango', 'Melancia']; //outro exemplo de declaracao de arrays
 var notas = [7.8, 9, 10];
+var notas2 = [7.8, 9, 10]; //esse outro tipo de declaração é mais utilizado.

@@ -60,4 +60,8 @@ E também nos ajuda a identificar caso tentamos colocar outro tipo em uma variá
 ``` //Exemplo ```
 ``` let  titulo: string = "A menina que roubava livros"; ```
 
+### Modificadores de Visibilidade - Métodos e Atributos
+
+- Private : não consigo acessá-lo diretamente.
+- Public: podem ser acessados a partir da referencia do objeto . nome do atributo ou metodo.
 
