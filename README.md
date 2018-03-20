@@ -55,7 +55,7 @@ O JavaScript permite vc declarar uma variável de um tipo e no meio do código a
 ``` variavel1 = true; ```
 
 O TypeScript ajuda a resolver esses problemas fazendo a Inferência de Tipo para variáveis.
-E também nos ajuda a identificar caso tentamos colocar outro tipo em uma variável ja declarada. 
+E também nos ajuda a identificar caso tentamos colocar outro tipo em uma variável ja declarada.
 
 ``` //Exemplo ```
 ``` let  titulo: string = "A menina que roubava livros"; ```
