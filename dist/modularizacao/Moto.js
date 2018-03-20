@@ -11,16 +11,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var Veiculo_1 = require("./Veiculo");
-var Carro2 = /** @class */ (function (_super) {
-    __extends(Carro2, _super);
-    function Carro2(modelo, numeroDePortas) {
-        var _this = _super.call(this) || this;
-        _this.modelo = modelo;
-        _this.numeroDePortas = numeroDePortas;
-        return _this;
+var Moto = /** @class */ (function (_super) {
+    __extends(Moto, _super);
+    function Moto() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    return Carro2;
+    return Moto;
 }(Veiculo_1.default));
-exports.default = Carro2;
-// exemplo de export de constantes
-exports.constanteExemplo = 'Teste';
+//também podemos separar as exportaçoes para sabermos mais facilmente o que o módulo exporta
+// é uma outra maneira de utilizar o export
+exports.default = Moto;

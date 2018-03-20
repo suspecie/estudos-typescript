@@ -62,8 +62,9 @@ E também nos ajuda a identificar caso tentamos colocar outro tipo em uma variá
 
 ## Modificadores de Visibilidade - Métodos e Atributos
 
-- Private : não consigo acessá-lo diretamente.
+- Private : não consigo acessá-lo diretamente, só pode ser alterada a partir do próprio objeto.
 - Public: podem ser acessados a partir da referencia do objeto . nome do atributo ou metodo.
+- Protected: semalhante ao private, a diferença é que ele permite que classes filhas façam a alteração direta.
 
 ## .map()
 
@@ -91,6 +92,21 @@ Mais funções: https://www.w3schools.com/js/js_array_methods.asp
 ``` import { NomeDaClasse as nomedoalias} from './CaminhoDoArquivo'; ```
 - default: importação default é um pouco diferente a estrutura.
 ``` import NomeDaClasse from './CaminhoDoArquivo'; ```
+
+## extends (herança)
+
+- é a capacidade que uma classe possui de herdar métodos e atributos de outra classe.
+Em um exemplo prático, podemos criar a classe imóvel.
+A classe imóvel contém os atributos quartos, salas, cozinha.
+A classe apartamento, herda os mesmos atributos.
+E já a classe casa, herda os mesmos atributos porém tem o telhado de diferença.
+O mesmo acontece com os métodos.
+Uma classe pode herdar somente uma classe.
+Quando uma classe extende outra ela precisa ter uma chamada para a função super.
+
+## funcao super
+- ajusta o contexto das variaveis.
+- deve ser chamada dentro de um construtor.
 
 
 

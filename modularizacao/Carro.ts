@@ -1,26 +1,17 @@
-export default class Carro2 {
-    
-    private modelo: string;
-    private numeroDePortas: number;
-    private velocidade: number = 0;
+import Veiculo from './Veiculo';
 
+export default class Carro2 extends Veiculo{
+    
+    private numeroDePortas: number;
+    
     constructor(modelo: string, numeroDePortas: number) {
+        super();
         this.modelo = modelo;
         this.numeroDePortas = numeroDePortas;
     }
 
-    public acelerar(): void {
-        this.velocidade = this.velocidade + 10;
-    }
-
-    public parar(): void{
-        this.velocidade = 0;
-    }
-
-    public velocidadeAtual(): number {
-        return this.velocidade; 
-    }
 
 }
 
+// exemplo de export de constantes
 export const constanteExemplo = 'Teste';
