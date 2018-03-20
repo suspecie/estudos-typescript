@@ -108,6 +108,8 @@ Quando uma classe extende outra ela precisa ter uma chamada para a função supe
 - ajusta o contexto das variaveis.
 - deve ser chamada dentro de um construtor.
 
+## polimorfismo (sobrescrita de método)
+- Uma classe filha define o seu proprio comportamento baseado em um metodo implementado na classe pai.
 
 
 

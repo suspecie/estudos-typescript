@@ -16,6 +16,10 @@ var Moto = /** @class */ (function (_super) {
     function Moto() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    //aqui estamos sobrescrevendo um método herdado de Veiculo
+    Moto.prototype.acelerar = function () {
+        this.velocidade = this.velocidade + 30;
+    };
     return Moto;
 }(Veiculo_1.default));
 //também podemos separar as exportaçoes para sabermos mais facilmente o que o módulo exporta
