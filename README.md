@@ -111,6 +111,18 @@ Quando uma classe extende outra ela precisa ter uma chamada para a função supe
 ## polimorfismo (sobrescrita de método)
 - Uma classe filha define o seu proprio comportamento baseado em um metodo implementado na classe pai.
 
+## implements (Interfaces) 
+- Define como uma classe deve implementar os seus métodos.
+- Quando uma classe implementa uma interface, essa classe precisa implementar os métodos.
+- A interface somente relaciona quais métodos deverão ser implementdos.
+- A classe que implementa essa interface deve dizer COMO o método deve se comportar.
+
+``` interface ConcessionariaInterface { } ```
+
+``` export default class Concessionaria implements ConcessionariaInterface {} ```
+
+
+
 
 
 
