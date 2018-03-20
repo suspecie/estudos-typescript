@@ -29,20 +29,21 @@ var Carro = /** @class */ (function () {
  * Geração do objeto da classe Carro / Instancia da Classe
  * Para ver no console o objeto temos que ir até a pasta dist e executar o comando node app2
  */
-var carroA = new Carro('Veloster', 3);
+/*let carroA = new Carro('Veloster', 3);
 console.log('------ CARROS ----------');
 console.log(carroA);
 carroA.acelerar();
 console.log(carroA);
 carroA.acelerar();
 console.log(carroA);
-console.log('----------------------');
+console.log('----------------------');*/
 /**
  * Classe concessionaria
  */
 var Concessionaria = /** @class */ (function () {
-    function Concessionaria(endereco) {
+    function Concessionaria(endereco, listaDeCarros) {
         this.endereco = endereco;
+        this.listaDeCarros = listaDeCarros;
     }
     Concessionaria.prototype.fornecerEndereco = function () {
         return this.endereco;
@@ -52,10 +53,6 @@ var Concessionaria = /** @class */ (function () {
     };
     return Concessionaria;
 }());
-console.log('------ CONCESSIONARIA ----------');
-var concessionaria = new Concessionaria('Av. Paulista');
-console.log(concessionaria);
-console.log('----------------');
 /**
  * Classe pessoa
  */
@@ -78,7 +75,25 @@ var Pessoa = /** @class */ (function () {
     };
     return Pessoa;
 }());
-console.log('------ PESSOA ----------');
-var pessoa = new Pessoa('Su', 'Corsa');
-console.log(pessoa.dizerCarroPreferido());
-console.log('-----------------');
+/**
+ * Definindo a regra de negocio
+ */
+/* Criação de carros */
+var carro1 = new Carro('Etios', 4);
+var carro2 = new Carro('Uno', 2);
+var carro3 = new Carro('Sandero', 4);
+/* Montando lista de carros da concessionaria */
+var listaDeCarros = [carro1, carro2, carro3];
+var lojaConcessionaria = new Concessionaria('Av. Paulista', listaDeCarros);
+/* Exibindo a lista de carros*/
+console.log(lojaConcessionaria.mostrarListaDeCarros());
+/* Comprar o carro */
+var cliente = new Pessoa('Su', 'Sandero');
+//percorrendo lista para verficar se o carro preferido consta na lista de carros da concessionaria
+lojaConcessionaria.mostrarListaDeCarros().map(function (carro) {
+    if (carro['modelo'] == cliente.dizerCarroPreferido()) {
+        //comprar o carro
+        cliente.comprarCarro(carro);
+    }
+});
+console.log(cliente.dizerCarroQueTem());

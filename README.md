@@ -65,3 +65,11 @@ E também nos ajuda a identificar caso tentamos colocar outro tipo em uma variá
 - Private : não consigo acessá-lo diretamente.
 - Public: podem ser acessados a partir da referencia do objeto . nome do atributo ou metodo.
 
+### .map()
+
+Função nativa de variáveis do tipo array.
+Um loop dentro de cada uma das posições do array, podemos recuperar o valor e fazer uma determinada ação através do envio de uma funcao de callback.
+
+``` lojaConcessionaria.mostrarListaDeCarros().map((carro: Carro) => { console.log(carro); }) ```
+
+

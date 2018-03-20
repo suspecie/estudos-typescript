@@ -46,14 +46,14 @@ class Carro {
  * Para ver no console o objeto temos que ir até a pasta dist e executar o comando node app2
  */
 
- let carroA = new Carro('Veloster', 3);
+ /*let carroA = new Carro('Veloster', 3);
  console.log('------ CARROS ----------');
  console.log(carroA);
  carroA.acelerar();
  console.log(carroA);
  carroA.acelerar();
  console.log(carroA);
- console.log('----------------------');
+ console.log('----------------------');*/
 
  /**
   * Classe concessionaria
@@ -62,25 +62,23 @@ class Carro {
 class Concessionaria {
     
     private endereco: string;
-    private listaDeCarros: any; //permite que a variavel receba qualquer tipo de dado
+    // private listaDeCarros: any; //permite que a variavel receba qualquer tipo de dado
+    private listaDeCarros: Carro[];
 
-    constructor(endereco: string) {
+    constructor(endereco: string, listaDeCarros: Carro[]) {
         this.endereco = endereco;
+        this.listaDeCarros = listaDeCarros;
     }
 
     public fornecerEndereco(): string {
         return this.endereco;
     }
 
-    public mostrarListaDeCarros(): any {
+    public mostrarListaDeCarros(): Carro[] {
         return this.listaDeCarros;
     }
 
 }
-console.log('------ CONCESSIONARIA ----------');
-let concessionaria = new Concessionaria('Av. Paulista');
-console.log(concessionaria);
-console.log('----------------');
 
 /**
  * Classe pessoa
@@ -90,7 +88,7 @@ class Pessoa {
 
     private nome: string;
     private carroPreferido: string;
-    private carro: any;
+    private carro: Carro;
 
     constructor (nome: string, carroPreferido: string) {
         this.nome = nome;
@@ -105,16 +103,41 @@ class Pessoa {
         return this.carroPreferido;
     }
 
-    public comprarCarro(carro: any): void {
+    public comprarCarro(carro: Carro): void {
         this.carro = carro;
     }
 
-    public dizerCarroQueTem(): any {
+    public dizerCarroQueTem(): Carro {
         return this.carro;
     }
 }
 
-console.log('------ PESSOA ----------');
-let pessoa = new Pessoa('Su','Corsa');
-console.log(pessoa.dizerCarroPreferido());
-console.log('-----------------');
+
+/**
+ * Definindo a regra de negocio
+ */
+
+/* Criação de carros */
+let carro1 = new Carro('Etios', 4);
+let carro2 = new Carro('Uno', 2);
+let carro3 = new Carro('Sandero', 4);
+
+/* Montando lista de carros da concessionaria */
+let listaDeCarros: Carro[] = [carro1, carro2, carro3];
+let lojaConcessionaria = new Concessionaria('Av. Paulista', listaDeCarros);
+
+/* Exibindo a lista de carros*/
+console.log(lojaConcessionaria.mostrarListaDeCarros());
+
+/* Comprar o carro */
+let cliente = new Pessoa('Su', 'Sandero');
+
+//percorrendo lista para verficar se o carro preferido consta na lista de carros da concessionaria
+lojaConcessionaria.mostrarListaDeCarros().map((carro: Carro) => {
+    if (carro['modelo'] == cliente.dizerCarroPreferido()) {
+        //comprar o carro
+        cliente.comprarCarro(carro);
+    }
+});
+
+console.log(cliente.dizerCarroQueTem());
