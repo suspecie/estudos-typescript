@@ -72,4 +72,8 @@ Um loop dentro de cada uma das posições do array, podemos recuperar o valor e 
 
 ``` lojaConcessionaria.mostrarListaDeCarros().map((carro: Carro) => { console.log(carro); }) ```
 
+Mais funções: https://www.w3schools.com/js/js_array_methods.asp
+
+
+
 
