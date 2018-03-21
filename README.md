@@ -1,6 +1,11 @@
 # estudos-typescript
 Pequenas dicas sobre TypeScript
 
+Curso: Estudos do curso Desenvolvimento Web com ES5, TypeScript e Angular4 da Udemy
+Créditos: Jorge Sant Ana
+https://www.udemy.com/curso-de-desenvolvimento-web-com-es6-typescript-e-angular-4/
+
+
 ## Sobre o Typescript
 
 - TypeScript ajuda a fazer o transpire, ou seja os navegadores atuais ainda não conseguem entender as novas funcionalidades do ES6, e para que possamos utilizar essas novas features podemos utilizar o Typescript para fazer essa conversão do ES6 para o ES5, o qual os navegadores atualmente suportam.
