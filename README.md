@@ -116,10 +116,18 @@ Quando uma classe extende outra ela precisa ter uma chamada para a função supe
 - Quando uma classe implementa uma interface, essa classe precisa implementar os métodos.
 - A interface somente relaciona quais métodos deverão ser implementdos.
 - A classe que implementa essa interface deve dizer COMO o método deve se comportar.
+- Interfaces não possuem modificadores de visibilidade, pois eles somente forçam as classes que a implementaram terem os mesmos métodos.
 
 ``` interface ConcessionariaInterface { } ```
 
 ``` export default class Concessionaria implements ConcessionariaInterface {} ```
+
+## Generics
+- Permite que componentes, classes ou métodos sejam reutilizáveis.
+- Podemos por exemplo, fazer a interface receber algum tipo de dado no qual ela ira trabalhar.
+Para isso é so passarmos no nome da interface o  <T> , o T corresponde ao Type que será recebido.
+
+
 
 
 
